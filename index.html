@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-group {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Calculator</h3>
+    <label>
+            <input type="number" id="cal">
+        </label>
+    <label>
+            <input type="number" id="cal1">
+        </label>
+    <div class="form-group">
+        <label>
+                <input name="add" type="submit" id="add" value="Addition(+)" onclick="addition()"></input>
+            </label>
+        <label>
+                <input name="sub" type="submit" id="sub" value="Subtraction(-)" onclick="subtraction()"></input>
+            </label>
+        <label>
+                <input type="submit" name="mul" value="Multiplication(X)" id="mul" onclick="multiplication()"></input>
+            </label>
+        <label>
+                <input type="submit" name="div" id="div" value="Division(/)" onclick = "division()"></input>
+            </label>
+    </div>
+    <p id="result">Result:</p>
+
+    <!--Script-->
+    <script>
+        function addition() {
+            let cal = parseInt(document.getElementById("cal").value);
+            let cal1 = +document.getElementById("cal1").value;
+
+            document.getElementById("result").innerHTML = (cal + cal1);
+
+        }
+
+        function subtraction() {
+            let cal = parseInt(document.getElementById("cal").value);
+            let cal1 = +document.getElementById("cal1").value;
+
+            document.getElementById("result").innerHTML = (cal - cal1);
+
+        }
+
+        function multiplication() {
+            let cal = parseInt(document.getElementById("cal").value);
+            let cal1 = +document.getElementById("cal1").value;
+
+            document.getElementById("result").innerHTML = (cal * cal1);
+
+        }
+
+        function division() {
+            let cal = parseInt(document.getElementById("cal").value);
+            let cal1 = +document.getElementById("cal1").value;
+
+            document.getElementById("result").innerHTML = (cal / cal1);
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
